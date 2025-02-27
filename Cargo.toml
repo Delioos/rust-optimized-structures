@@ -1,0 +1,25 @@
+[package]
+name = "rust_data_structures"
+version = "0.1.0"
+edition = "2021"
+authors = ["Example <example@example.com>"]
+description = "A high-performance data structure library in Rust"
+license = "MIT"
+repository = "https://github.com/example/rust_data_structures"
+keywords = ["data-structures", "algorithms", "performance", "collections"]
+categories = ["data-structures", "algorithms"]
+
+[dependencies]
+rand = "0.8.5"       # For randomized testing
+criterion = { version = "0.5.1", optional = true }  # For benchmarking
+
+[dev-dependencies]
+criterion = "0.5.1"  # For benchmarking
+quickcheck = "1.0.3" # For property-based testing
+
+[features]
+benchmarks = ["criterion"]
+
+[lib]
+name = "rust_data_structures"
+path = "src/lib.rs"
